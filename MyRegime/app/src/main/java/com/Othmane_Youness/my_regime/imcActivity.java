@@ -30,7 +30,6 @@ public class imcActivity extends AppCompatActivity {
         String taille=intent.getStringExtra("taille");
         String age=intent.getStringExtra("age");
 
-        System.out.println(poids);
         String resultValue;
 
         double imcValue=Double.parseDouble(poids)/(Double.parseDouble(taille)*Double.parseDouble(taille));
