@@ -2,35 +2,41 @@ package com.Othmane_Youness.my_regime;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.view.View.OnClickListener;
-import android.view.View;
+
+import java.text.DecimalFormat;
 
 public class imcActivity extends AppCompatActivity {
 
     Button goToRegimeBut;
-    TextView imc,result;
+    TextView imc;
+    TextView result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_imc);
-        imc.findViewById(R.id.imc);
-        result.findViewById(R.id.result);
-        goToRegimeBut.findViewById(R.id.goToRegimeBut);
 
-        float poids=125;
-        float taille=156;
-        float age=156;
+        imc=findViewById(R.id.imcText);
+        result=findViewById(R.id.result);
+        goToRegimeBut=findViewById(R.id.goToRegimeBut);
+
+        Intent intent = getIntent();
+        String poids=intent.getStringExtra("poids");
+        String taille=intent.getStringExtra("taille");
+        String age=intent.getStringExtra("age");
+
+        System.out.println(poids);
         String resultValue;
 
-        float imcValue=poids/(taille*taille);
+        double imcValue=Double.parseDouble(poids)/(Double.parseDouble(taille)*Double.parseDouble(taille));
 
-
-
-        imc.setText(String.valueOf(imcValue));
+        DecimalFormat df2 = new DecimalFormat("#.##");
+        imc.setText(String.valueOf(df2.format(imcValue)));
         if(imcValue<18.5)
             resultValue="Vous êtes en Insuffisance pondérale (maigreur)";
         else if(imcValue<25)
@@ -45,7 +51,7 @@ public class imcActivity extends AppCompatActivity {
             resultValue="Vous êtes dans une obésité morbide ou massive";
 
         result.setText(resultValue);
-        goToRegimeBut.setOnClickListener(new OnClickListener() {
+        goToRegimeBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 System.out.println("go to regime");

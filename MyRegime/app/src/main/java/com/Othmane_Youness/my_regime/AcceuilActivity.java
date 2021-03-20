@@ -12,17 +12,24 @@ public class AcceuilActivity extends AppCompatActivity {
 
     Button btn1;
 
-    EditText editPoids= (EditText) findViewById(R.id.editPoids);
-    EditText editTaille = (EditText) findViewById(R.id.editTaille);
-    EditText editAge= (EditText) findViewById(R.id.editAge);
-    String poids = editPoids.getText().toString();
-    String taille = editTaille.getText().toString();
-    String age = editAge.getText().toString();
+    EditText editPoids;
+    EditText editTaille;
+    EditText editAge;
+    String poids;
+    String taille;
+    String age;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acceuil);
+
+        editPoids=findViewById(R.id.editPoids);
+        editTaille=findViewById(R.id.editTaille);
+        editAge=findViewById(R.id.editAge);
+        poids=editPoids.getText().toString();
+        taille=editTaille.getText().toString();
+        age = editAge.getText().toString();
 
         btn1 = findViewById(R.id.btn1);
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -35,7 +42,7 @@ public class AcceuilActivity extends AppCompatActivity {
     }
 
     private void switchToIMC() {
-        Intent switchActivityIntent = new Intent(getApplicationContext(), ImcActivity.class);
+        Intent switchActivityIntent = new Intent(getApplicationContext(), imcActivity.class);
         switchActivityIntent.putExtra("poids", poids);
         switchActivityIntent.putExtra("taille", taille);
         switchActivityIntent.putExtra("age", age);
