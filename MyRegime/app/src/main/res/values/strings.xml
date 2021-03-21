@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">My-Regime</string>
+    <string name="my_regime">My Regime</string>
+    <string name="taille">Taille</string>
+    <string name="nom">Nom</string>
+    <string name="poids">Poids</string>
+    <string name="submit">Submit</string>
+    <string name="kg">(Kg)</string>
+    <string name="m">(m)</string>
+    <string name="votreimcest">Votre IMC est:</string>
+    <string name="decouvrir">Découvrir notre régime adapter à vous:</string>
+
 </resources>
