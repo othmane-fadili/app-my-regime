@@ -3,6 +3,7 @@ package com.Othmane_Youness.my_regime;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -37,28 +38,25 @@ public class RegimeActivity extends AppCompatActivity {
 
 
         ArrayList<String> listOfRegimes;
+        Resources res = getResources();
+        String[] category1 = res.getStringArray(R.array.Regime1);
+        String[] category2 = res.getStringArray(R.array.Regime2);
+        String[] category3 = res.getStringArray(R.array.Regime3);
+        String[] category4 = res.getStringArray(R.array.Regime4);
+        String[] category5 = res.getStringArray(R.array.Regime5);
+        String[] category6 = res.getStringArray(R.array.Regime6);
+
+
 
         if (!"".equals(imcCategory)) {
             switch (imcCategory) {
                 case "1":
-                    regimeTitle.setText("Régime hypercalorique pour prendre du poids");
-                    listOfRegimes=new ArrayList<String>(Arrays.asList(
-                            "-Consommer des aliments à densité énergétique élevée",
-                            "-Stimuler l'appétit",
-                            "-Faire des collations",
-                            "-Eviter les produits à densité énergétique faible et allégés",
-                            "-Pratiquer une activité physique d'intensité modérée"
-                            )) ;
+                    regimeTitle.setText(category1[0]);
+                    listOfRegimes=new ArrayList<String>(Arrays.asList(category1[1],category1[2],category1[3],category1[4] )) ;
                     break;
                 case "2":
-                    regimeTitle.setText("Régime alimentaires pour garder la ligne et rester en bonne santé");
-                    listOfRegimes=new ArrayList<String>(Arrays.asList(
-                            "-Surveiller son poids et pratiquer une activité physique",
-                            "-Consommer davantage de bonnes graisses",
-                            "-Manger plus de céréales complètes",
-                            "-Choisir de bonnes sources de protéine",
-                            "-Manger des fruits et des légumes en quantité"
-                    )) ;
+                    regimeTitle.setText(category2[0]);
+                    listOfRegimes=new ArrayList<String>(Arrays.asList(category2[1],category2[2],category2[3],category2[4] )) ;
                     break;
                 case "3":
                     regimeTitle.setText("Régime spécial embonpoint");
@@ -135,35 +133,6 @@ public class RegimeActivity extends AppCompatActivity {
             textView.setText(listOfRegimes.get(i));
             regimeItems.addView(textView);
         }
-
-    }
-
-    private void viewSwitcher(String imcCategory){
-
-        if (!"".equals(imcCategory)) {
-            switch (imcCategory) {
-                case "1":
-                    //addViewToRegime("Pratiquer une activité physique d'intensité modérée");
-                    break;
-                case "2":
-                    //addViewToRegime("Pratiquer une activité physique d'intensité modérée");
-                    break;
-                case "3":
-                    //addViewToRegime("Pratiquer une activité physique d'intensité modérée");
-                    break;
-                case "4":
-                    //addViewToRegime("Pratiquer une activité physique d'intensité modérée");
-                    break;
-                case "5":
-                    //addViewToRegime("Pratiquer une activité physique d'intensité modérée");
-                    break;
-                case "6":
-                    //addViewToRegime("Pratiquer une activité physique d'intensité modérée");
-                    break;
-                default:       break;
-            }
-        }
-
 
     }
 

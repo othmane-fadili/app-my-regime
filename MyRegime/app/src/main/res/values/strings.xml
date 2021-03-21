@@ -10,4 +10,58 @@
     <string name="votreimcest">Votre IMC est:</string>
     <string name="decouvrir">Découvrir notre régime adapter à vous:</string>
 
+    <string-array name="Regime1">
+        <item>Régime hypercalorique pour prendre du poids</item>
+        <item>-Consommer des aliments à densité énergétique élevée</item>
+        <item>-Stimuler l'appétit</item>
+        <item>-Faire des collations</item>
+        <item>-Eviter les produits à densité énergétique faible et allégés</item>
+        <item>-Pratiquer une activité physique d'intensité modérée</item>
+    </string-array>
+
+    <string-array name="Regime2">
+        <item>Régime alimentaires pour garder la ligne et rester en bonne santé</item>
+        <item>-Surveiller son poids et pratiquer une activité physique</item>
+        <item>-Consommer davantage de bonnes graisses</item>
+        <item>-Manger plus de céréales complètes</item>
+        <item>-Choisir de bonnes sources de protéine</item>
+        <item>-Manger des fruits et des légumes en quantité</item>
+    </string-array>
+
+    <string-array name="Regime3">
+        <item>Régime hypercalorique pour prendre du poids</item>
+        <item>-Consommer des aliments à densité énergétique élevée</item>
+        <item>-Stimuler l'appétit</item>
+        <item>-Faire des collations</item>
+        <item>-Eviter les produits à densité énergétique faible et allégés</item>
+        <item>-Pratiquer une activité physique d'intensité modérée</item>
+    </string-array>
+
+    <string-array name="Regime4">
+        <item>Régime hypercalorique pour prendre du poids</item>
+        <item>-Consommer des aliments à densité énergétique élevée</item>
+        <item>-Stimuler l'appétit</item>
+        <item>-Faire des collations</item>
+        <item>-Eviter les produits à densité énergétique faible et allégés</item>
+        <item>-Pratiquer une activité physique d'intensité modérée</item>
+    </string-array>
+
+    <string-array name="Regime5">
+        <item>Régime hypercalorique pour prendre du poids</item>
+        <item>-Consommer des aliments à densité énergétique élevée</item>
+        <item>-Stimuler l'appétit</item>
+        <item>-Faire des collations</item>
+        <item>-Eviter les produits à densité énergétique faible et allégés</item>
+        <item>-Pratiquer une activité physique d'intensité modérée</item>
+    </string-array>
+
+    <string-array name="Regime6">
+        <item>Régime hypercalorique pour prendre du poids</item>
+        <item>-Consommer des aliments à densité énergétique élevée</item>
+        <item>-Stimuler l'appétit</item>
+        <item>-Faire des collations</item>
+        <item>-Eviter les produits à densité énergétique faible et allégés</item>
+        <item>-Pratiquer une activité physique d'intensité modérée</item>
+    </string-array>
+
 </resources>
