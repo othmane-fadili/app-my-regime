@@ -14,7 +14,7 @@ public class AcceuilActivity extends AppCompatActivity {
 
     EditText editPoids;
     EditText editTaille;
-    EditText editAge;
+    EditText editName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class AcceuilActivity extends AppCompatActivity {
 
         editPoids=(EditText)findViewById(R.id.editPoids);
         editTaille=(EditText)findViewById(R.id.editTaille);
-        editAge=(EditText)findViewById(R.id.editAge);
+        editName=(EditText)findViewById(R.id.editName);
 
         btn1 = findViewById(R.id.btn1);
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -37,14 +37,25 @@ public class AcceuilActivity extends AppCompatActivity {
 
     private void switchToIMC() {
 
-        String poids=editPoids.getText().toString();
-        String taille=editTaille.getText().toString();
-        String age = editAge.getText().toString();
+        String poids=editPoids.getText().toString().trim();
+        String taille=editTaille.getText().toString().trim();
+        String name = editName.getText().toString().trim();
 
-        Intent switchActivityIntent = new Intent(getApplicationContext(), imcActivity.class);
-        switchActivityIntent.putExtra("poids", poids);
-        switchActivityIntent.putExtra("taille", taille);
-        switchActivityIntent.putExtra("age", age);
-        startActivity(switchActivityIntent);
+        //Checks the inputs.
+        if (name.length() == 0)
+            editName.setError("Please Enter a valid name!");
+        else if (poids.length() == 0)
+            editPoids.setError("Please Enter a poids!");
+        else if (taille.length() == 0)
+            editTaille.setError("Please Enter a taille!");
+        else{
+            Intent switchActivityIntent = new Intent(getApplicationContext(), ImcActivity.class);
+            switchActivityIntent.putExtra("name", name);
+            switchActivityIntent.putExtra("poids", poids);
+            switchActivityIntent.putExtra("taille", taille);
+            startActivity(switchActivityIntent);
+        }
+
+
     }
 }

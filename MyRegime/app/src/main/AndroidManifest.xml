@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyRegime">
-        <activity android:name=".imcActivity"></activity>
+        <activity android:name=".RegimeActivity"></activity>
+        <activity android:name=".ImcActivity" />
         <activity android:name=".AcceuilActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
