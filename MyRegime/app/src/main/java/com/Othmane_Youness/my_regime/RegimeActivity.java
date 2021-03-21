@@ -36,6 +36,38 @@ public class RegimeActivity extends AppCompatActivity {
         String name=intent.getStringExtra("name");
         String imcCategory=intent.getStringExtra("imcCategory");
 
+        addDietList(imcCategory);
+
+
+        btnRetour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switchRetourActivity();
+            }
+        });
+        btnQuitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switchQuitActivity();
+            }
+        });
+
+    }
+
+
+    private void addViewsToRegime(ArrayList<String> listOfRegimes){
+
+        for(int i=0;i<listOfRegimes.size();i++){
+            TextView textView = new TextView(this);
+            textView.setTextSize(20);
+            textView.setPadding(0,10,0,10);
+            textView.setText(listOfRegimes.get(i));
+            regimeItems.addView(textView);
+        }
+
+    }
+
+    private void addDietList(String imcCategory){
 
         ArrayList<String> listOfRegimes;
         Resources res = getResources();
@@ -59,80 +91,57 @@ public class RegimeActivity extends AppCompatActivity {
                     listOfRegimes=new ArrayList<String>(Arrays.asList(category2[1],category2[2],category2[3],category2[4] )) ;
                     break;
                 case "3":
-                    regimeTitle.setText("Régime spécial embonpoint");
-                    listOfRegimes=new ArrayList<String>(Arrays.asList(
-                            "-Evaluer votre faim",
-                            "-Manger lentement",
-                            "-S'entraîner à déguster un bon repas et à en extraire toutes les saveurs",
-                            "-Boire de l'eau pendant le repas",
-                            "-Utiliser de nouvelles épices en cuisine pour réveiller le sens du goût"
-                    )) ;
+                    regimeTitle.setText(category3[0]);
+                    listOfRegimes=new ArrayList<String>(Arrays.asList(category3[1],category3[2],category3[3],category3[4] )) ;
                     break;
                 case "4":
-                    regimeTitle.setText("Régime pour une Obésité modérée");
-                    listOfRegimes=new ArrayList<String>(Arrays.asList(
-                            "-consommer des aliments à densité énergétique élevée",
-                            "-Stimuler l'appétit",
-                            "-Faire des colltions",
-                            "-Eviter les produits à densité énergétique faible et allégés",
-                            "-Pratiquer une activité physique d'intensité modérée"
-                    )) ;
+                    regimeTitle.setText(category4[0]);
+                    listOfRegimes=new ArrayList<String>(Arrays.asList(category4[1],category4[2],category4[3],category4[4] )) ;
                     break;
                 case "5":
-                    regimeTitle.setText("Prise en charge nutritionnelle d'obésité sévère");
-                    listOfRegimes=new ArrayList<String>(Arrays.asList(
-                            "-La réduction des apports énergétiques",
-                            "-se consacrer au repas, être attentif à son assiette",
-                            "-cuisiner si possible soi-même ou indiquer clairement les consignes à la personne qui cuisine",
-                            "-avorise la perte de poids et préserve la masse maigre",
-                            "-limiter l’utilisation de matière grasse pour la cuisson"
-                    )) ;
+                    regimeTitle.setText(category5[0]);
+                    listOfRegimes=new ArrayList<String>(Arrays.asList(category5[1],category5[2],category5[3],category5[4] )) ;
                     break;
                 case "6":
-                    regimeTitle.setText("Prise en charge nutritionnelle d'obésité morbide");
-                    listOfRegimes=new ArrayList<String>(Arrays.asList(
-                            "-Bien dormir ",
-                            "-Le thé vert",
-                            "-La douche froide",
-                            "-Manger froid",
-                            "-Boire avant de manger"
-                    )) ;
+                    regimeTitle.setText(category6[0]);
+                    listOfRegimes=new ArrayList<String>(Arrays.asList(category6[1],category6[2],category6[3],category6[4] )) ;
                     break;
                 default:
                     listOfRegimes=new ArrayList<String>();
                     break;
             }
 
-            addViewToRegime(listOfRegimes);
+            addViewsToRegime(listOfRegimes);
         }
-
-
-
-        btnRetour.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                switchRetourActivity();
-            }
-        });
-        btnQuitter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                switchQuitActivity();
-            }
-        });
 
     }
 
+    private void viewSwitcher(String imcCategory){
 
-    private void addViewToRegime(ArrayList<String> listOfRegimes){
-
-        for(int i=0;i<listOfRegimes.size();i++){
-            TextView textView = new TextView(this);
-            textView.setTextSize(20);
-            textView.setPadding(0,10,0,10);
-            textView.setText(listOfRegimes.get(i));
-            regimeItems.addView(textView);
+        if (!"".equals(imcCategory)) {
+            switch (imcCategory) {
+                case "1":
+                    //addViewToRegime("Pratiquer une activité physique d'intensité modérée");
+                    break;
+                case "2":
+                    //addViewToRegime("Pratiquer une activité physique d'intensité modérée");
+                    break;
+                case "3":
+                    //addViewToRegime("Pratiquer une activité physique d'intensité modérée");
+                    break;
+                case "4":
+                    //addViewToRegime("Pratiquer une activité physique d'intensité modérée");
+                    break;
+                case "5":
+                    //addViewToRegime("Pratiquer une activité physique d'intensité modérée");
+                    break;
+                case "6":
+                    //addViewToRegime("Pratiquer une activité physique d'intensité modérée");
+                    break;
+                default:       break;
+            }
         }
+
 
     }
 

@@ -13,10 +13,10 @@
     <string-array name="Regime1">
         <item>Régime hypercalorique pour prendre du poids</item>
         <item>-Consommer des aliments à densité énergétique élevée</item>
-        <item>-Stimuler l'appétit</item>
+        <item>-Stimuler l\'appétit</item>
         <item>-Faire des collations</item>
         <item>-Eviter les produits à densité énergétique faible et allégés</item>
-        <item>-Pratiquer une activité physique d'intensité modérée</item>
+        <item>-Pratiquer une activité physique d\'intensité modérée</item>
     </string-array>
 
     <string-array name="Regime2">
@@ -29,39 +29,39 @@
     </string-array>
 
     <string-array name="Regime3">
-        <item>Régime hypercalorique pour prendre du poids</item>
-        <item>-Consommer des aliments à densité énergétique élevée</item>
-        <item>-Stimuler l'appétit</item>
-        <item>-Faire des collations</item>
-        <item>-Eviter les produits à densité énergétique faible et allégés</item>
-        <item>-Pratiquer une activité physique d'intensité modérée</item>
+        <item>Régime spécial embonpoint</item>
+        <item>-Evaluer votre faim</item>
+        <item>-Manger lentement</item>
+        <item>-S\'entraîner à déguster un bon repas et à en extraire toutes les saveurs</item>
+        <item>-Boire de l\'eau pendant le repas</item>
+        <item>-Utiliser de nouvelles épices en cuisine pour réveiller le sens du goût</item>
     </string-array>
 
     <string-array name="Regime4">
-        <item>Régime hypercalorique pour prendre du poids</item>
+        <item>Régime pour une Obésité modérée</item>
         <item>-Consommer des aliments à densité énergétique élevée</item>
-        <item>-Stimuler l'appétit</item>
-        <item>-Faire des collations</item>
+        <item>-Stimuler l\'appétit</item>
+        <item>-Faire des colltions</item>
         <item>-Eviter les produits à densité énergétique faible et allégés</item>
-        <item>-Pratiquer une activité physique d'intensité modérée</item>
+        <item>-Pratiquer une activité physique d\'intensité modérée</item>
     </string-array>
 
     <string-array name="Regime5">
-        <item>Régime hypercalorique pour prendre du poids</item>
-        <item>-Consommer des aliments à densité énergétique élevée</item>
-        <item>-Stimuler l'appétit</item>
-        <item>-Faire des collations</item>
-        <item>-Eviter les produits à densité énergétique faible et allégés</item>
-        <item>-Pratiquer une activité physique d'intensité modérée</item>
+        <item>Prise en charge nutritionnelle d\'obésité sévère</item>
+        <item>-La réduction des apports énergétiques</item>
+        <item>-Se consacrer au repas, être attentif à son assiette</item>
+        <item>-Cuisiner si possible soi-même ou indiquer clairement les consignes à la personne qui cuisine</item>
+        <item>-Favorise la perte de poids et préserve la masse maigre</item>
+        <item>-Limiter l\’utilisation de matière grasse pour la cuisson</item>
     </string-array>
 
     <string-array name="Regime6">
-        <item>Régime hypercalorique pour prendre du poids</item>
-        <item>-Consommer des aliments à densité énergétique élevée</item>
-        <item>-Stimuler l'appétit</item>
-        <item>-Faire des collations</item>
-        <item>-Eviter les produits à densité énergétique faible et allégés</item>
-        <item>-Pratiquer une activité physique d'intensité modérée</item>
+        <item>Prise en charge nutritionnelle d\'obésité morbide</item>
+        <item>-Bien dormir</item>
+        <item>-Le thé vert</item>
+        <item>-La douche froide</item>
+        <item>-Manger froid</item>
+        <item>-Boire avant de manger</item>
     </string-array>
 
 </resources>
