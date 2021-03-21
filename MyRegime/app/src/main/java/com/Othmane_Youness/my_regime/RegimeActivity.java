@@ -54,14 +54,13 @@ public class RegimeActivity extends AppCompatActivity {
 
     }
 
-
-    private void addViewsToRegime(ArrayList<String> listOfRegimes){
-
-        for(int i=0;i<listOfRegimes.size();i++){
+    private void changeTextViewRegime(String[] category){
+        regimeTitle.setText(category[0]);
+        for(int i=1;i<category.length;i++){
             TextView textView = new TextView(this);
             textView.setTextSize(20);
             textView.setPadding(0,10,0,10);
-            textView.setText(listOfRegimes.get(i));
+            textView.setText(category[i]);
             regimeItems.addView(textView);
         }
 
@@ -69,79 +68,43 @@ public class RegimeActivity extends AppCompatActivity {
 
     private void addDietList(String imcCategory){
 
-        ArrayList<String> listOfRegimes;
+        String[] wichCategory;
         Resources res = getResources();
-        String[] category1 = res.getStringArray(R.array.Regime1);
-        String[] category2 = res.getStringArray(R.array.Regime2);
-        String[] category3 = res.getStringArray(R.array.Regime3);
-        String[] category4 = res.getStringArray(R.array.Regime4);
-        String[] category5 = res.getStringArray(R.array.Regime5);
-        String[] category6 = res.getStringArray(R.array.Regime6);
-
-
+        String[] category1,category2,category3,category4, category5,category6;
 
         if (!"".equals(imcCategory)) {
             switch (imcCategory) {
                 case "1":
-                    regimeTitle.setText(category1[0]);
-                    listOfRegimes=new ArrayList<String>(Arrays.asList(category1[1],category1[2],category1[3],category1[4] )) ;
+                    category1 = res.getStringArray(R.array.Regime1);
+                    wichCategory=category1;
                     break;
                 case "2":
-                    regimeTitle.setText(category2[0]);
-                    listOfRegimes=new ArrayList<String>(Arrays.asList(category2[1],category2[2],category2[3],category2[4] )) ;
+                    category2 = res.getStringArray(R.array.Regime2);
+                    wichCategory=category2;
                     break;
                 case "3":
-                    regimeTitle.setText(category3[0]);
-                    listOfRegimes=new ArrayList<String>(Arrays.asList(category3[1],category3[2],category3[3],category3[4] )) ;
+                    category3 = res.getStringArray(R.array.Regime3);
+                    wichCategory=category3;
                     break;
                 case "4":
-                    regimeTitle.setText(category4[0]);
-                    listOfRegimes=new ArrayList<String>(Arrays.asList(category4[1],category4[2],category4[3],category4[4] )) ;
+                    category4 = res.getStringArray(R.array.Regime4);
+                    wichCategory=category4;
                     break;
                 case "5":
-                    regimeTitle.setText(category5[0]);
-                    listOfRegimes=new ArrayList<String>(Arrays.asList(category5[1],category5[2],category5[3],category5[4] )) ;
+                    category5 = res.getStringArray(R.array.Regime5);
+                    wichCategory=category5;
                     break;
                 case "6":
-                    regimeTitle.setText(category6[0]);
-                    listOfRegimes=new ArrayList<String>(Arrays.asList(category6[1],category6[2],category6[3],category6[4] )) ;
+                    category6 = res.getStringArray(R.array.Regime6);
+                    wichCategory=category6;
                     break;
                 default:
-                    listOfRegimes=new ArrayList<String>();
+                    wichCategory=new String[0];
                     break;
             }
 
-            addViewsToRegime(listOfRegimes);
+            changeTextViewRegime(wichCategory);
         }
-
-    }
-
-    private void viewSwitcher(String imcCategory){
-
-        if (!"".equals(imcCategory)) {
-            switch (imcCategory) {
-                case "1":
-                    //addViewToRegime("Pratiquer une activité physique d'intensité modérée");
-                    break;
-                case "2":
-                    //addViewToRegime("Pratiquer une activité physique d'intensité modérée");
-                    break;
-                case "3":
-                    //addViewToRegime("Pratiquer une activité physique d'intensité modérée");
-                    break;
-                case "4":
-                    //addViewToRegime("Pratiquer une activité physique d'intensité modérée");
-                    break;
-                case "5":
-                    //addViewToRegime("Pratiquer une activité physique d'intensité modérée");
-                    break;
-                case "6":
-                    //addViewToRegime("Pratiquer une activité physique d'intensité modérée");
-                    break;
-                default:       break;
-            }
-        }
-
 
     }
 

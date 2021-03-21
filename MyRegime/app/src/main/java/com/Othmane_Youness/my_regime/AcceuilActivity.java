@@ -42,7 +42,7 @@ public class AcceuilActivity extends AppCompatActivity {
         String name = editName.getText().toString().trim();
 
         //Checks the inputs.
-        if (name.length() == 0)
+        if (name.length() == 0 )
             editName.setError("Please Enter a valid name!");
         else if (poids.length() == 0 || !(Double.parseDouble(poids) >= 1) || !(Double.parseDouble(poids)<= 200 ))
             editPoids.setError("Please Enter a valid poids!");
