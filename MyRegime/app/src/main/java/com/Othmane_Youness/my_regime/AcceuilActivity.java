@@ -35,6 +35,8 @@ public class AcceuilActivity extends AppCompatActivity {
 
     }
 
+
+
     private void switchToIMC() {
 
         String poids=editPoids.getText().toString().trim();
@@ -42,7 +44,7 @@ public class AcceuilActivity extends AppCompatActivity {
         String name = editName.getText().toString().trim();
 
         //Checks the inputs.
-        if (name.length() == 0 )
+        if (name.length() == 0 || isContainNumbers(name))
             editName.setError("Please Enter a valid name!");
         else if (poids.length() == 0 || !(Double.parseDouble(poids) >= 1) || !(Double.parseDouble(poids)<= 200 ))
             editPoids.setError("Please Enter a valid poids!");
@@ -55,7 +57,18 @@ public class AcceuilActivity extends AppCompatActivity {
             switchActivityIntent.putExtra("taille", taille);
             startActivity(switchActivityIntent);
         }
-
-
     }
+
+    private boolean isContainNumbers(String str){
+        String numbers="0123456789.";
+        for(int i=0;i<str.length();i++){
+            for(int j=0;j<numbers.length();j++){
+                if(str.charAt(i)==numbers.charAt(j))
+                    return true;
+            }
+        }
+        return false;
+    }
+
 }
+
