@@ -7,15 +7,64 @@
     tools:context=".RegimeActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bonjour"
-        android:textSize="36sp"
+        android:id="@+id/regimeTitle"
+        android:layout_width="341dp"
+        android:layout_height="75dp"
+        android:background="#E6E2E6"
+        android:text="Régime hypercalorique pour prendre du poids"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="#43B347"
+        android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageRegime3"
+        android:layout_width="225dp"
+        android:layout_height="161dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.247" />
+        app:layout_constraintVertical_bias="0.192"
+        app:srcCompat="@drawable/regime" />
+
+    <TextView
+        android:id="@+id/title3"
+        android:layout_width="359dp"
+        android:layout_height="52dp"
+        android:background="#E6E2E6"
+        android:text="My Regime"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#43B347"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.055" />
+
+    <LinearLayout
+        android:id="@+id/regimeItems"
+        android:layout_width="294dp"
+        android:layout_height="227dp"
+        android:background="#FFFFFF"
+        android:fadingEdge="none"
+        android:isScrollContainer="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.94"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
