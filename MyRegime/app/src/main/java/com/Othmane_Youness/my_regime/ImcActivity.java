@@ -28,7 +28,7 @@ public class ImcActivity extends AppCompatActivity {
 
         imc=findViewById(R.id.imcText);
         result=findViewById(R.id.result);
-        goToRegimeBut=findViewById(R.id.goToRegimeBut);
+        goToRegimeBut=findViewById(R.id.btnRetour);
         btnQuitter = findViewById(R.id.btnQuitter);
         textBonjour=findViewById(R.id.textBonjour);
 

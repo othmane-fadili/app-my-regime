@@ -53,18 +53,58 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.055" />
+    <ScrollView
+        android:layout_width="338dp"
+        android:layout_height="219dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.806">
 
     <LinearLayout
         android:id="@+id/regimeItems"
-        android:layout_width="294dp"
-        android:layout_height="227dp"
+        android:layout_width="338dp"
+        android:layout_height="219dp"
         android:background="#FFFFFF"
         android:fadingEdge="none"
         android:isScrollContainer="true"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.94"/>
+        app:layout_constraintVertical_bias="0.806" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnRetour"
+        android:layout_width="159dp"
+        android:layout_height="55dp"
+        android:text="Retour"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.96" />
+
+    <Button
+        android:id="@+id/btnQuitter"
+        android:layout_width="159dp"
+        android:layout_height="55dp"
+        android:text="Quitter"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.861"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.961" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

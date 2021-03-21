@@ -44,10 +44,10 @@ public class AcceuilActivity extends AppCompatActivity {
         //Checks the inputs.
         if (name.length() == 0)
             editName.setError("Please Enter a valid name!");
-        else if (poids.length() == 0)
-            editPoids.setError("Please Enter a poids!");
-        else if (taille.length() == 0)
-            editTaille.setError("Please Enter a taille!");
+        else if (poids.length() == 0 || !(Double.parseDouble(poids) >= 1) || !(Double.parseDouble(poids)<= 200 ))
+            editPoids.setError("Please Enter a valid poids!");
+        else if (taille.length() == 0 || !(Double.parseDouble(taille) > 0) || !(Double.parseDouble(taille)<= 3 ))
+            editTaille.setError("Please Enter a valid taille!");
         else{
             Intent switchActivityIntent = new Intent(getApplicationContext(), ImcActivity.class);
             switchActivityIntent.putExtra("name", name);
